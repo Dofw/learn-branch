@@ -1,8 +1,17 @@
-
-function decorate(Test: {new (): void}) {
-  console.log(12344)
+class Validator {
+  value: string;
 }
 
-@decorate
+function params(obj: object, key: string, index: number) {}
+
 class Test {
+  constructor() {}
+
+  methods(@params arg1: Validator, @params arg2: number) {}
+
+  methods2(@params arg1: Validator, @params arg2: number) {}
 }
+
+const obj = new Test();
+
+obj.methods({ value: "fda" }, 123);
