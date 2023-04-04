@@ -11,17 +11,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+class NestObj {
+}
 class Validator {
 }
+__decorate([
+    params,
+    __metadata("design:type", NestObj)
+], Validator.prototype, "nestObj", void 0);
 function params(obj, key, index) { }
 class Test {
     constructor() { }
-    methods(arg1, arg2) {
-        console.log(arg1 + 1 + arg2);
-    }
-    methods2(arg1, arg2) {
-        console.log(arg1 + 1 + arg2);
-    }
+    methods(arg1, arg2) { }
+    methods2(arg1, arg2) { }
 }
 __decorate([
     __param(0, params),
@@ -38,4 +40,4 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], Test.prototype, "methods2", null);
 const obj = new Test();
-obj.methods();
+obj.methods({ value: "fda" }, 123);

@@ -1,5 +1,11 @@
+class NestObj {
+  value: number;
+}
+
 class Validator {
   value: string;
+  @params
+  nestObj: NestObj;
 }
 
 function params(obj: object, key: string, index: number) {}

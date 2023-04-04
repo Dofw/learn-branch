@@ -1,0 +1,16 @@
+$-color: red !default;
+$fontSize: 14px !default;
+
+@mixin configure($color: null, $fontSize: null) {
+  @if $color {
+    $-color: $color !global;
+  }
+  @if $fontSize {
+    $fontsize: $fontSize !global;
+  }
+}
+
+.test-base {
+  color: $-color;
+  font-size: $fontSize;
+}

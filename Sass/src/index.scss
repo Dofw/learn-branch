@@ -1,0 +1,11 @@
+@use "./base" as * with (
+  $fontSize: 20px
+);
+
+// @include configure($color: blue, $fontSize: 20px);
+
+@debug $fontSize;
+.index {
+  color: yellow !important;
+  font-size: $fontSize;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "sass ./src/index.scss ./compiler/index.css -w",
+    "test": "sass ./src/test.scss ./compiler/test.css -w"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "sass": "^1.60.0"
+  }
+}
