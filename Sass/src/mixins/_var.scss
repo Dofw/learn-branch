@@ -1,1 +1,46 @@
+@use "config";
+@use "sass:math";
+@use "sass:map";
+
 // css 变量相关的scss自定义函数
+
+// 设置css变量
+@mixin set-css-var-value($name, $value) {
+  #{joinVarName($name)}: #{$value};
+}
+
+// 将给定的名字 -> BEM 规范的css属性名。
+@function joinVarName($list) {
+  $name: "--" + config.$namespace;
+
+  @each $item in $list {
+    @if $item != "" {
+      $name: $name + "-" + $item;
+    }
+  }
+
+  @return $name;
+}
+
+// 同一type颜色 不同合并。合并效果。
+@mixin set-color-mix-level(
+  $type,
+  $number,
+  $mode: "light",
+  $mix-color: $color-white
+) {
+  $colors: map.deep-merge(
+    (
+      $type: (
+        "#{$mode}-#{$number}":
+          mix(
+            $mix-color,
+            map.get($colors, $type, "base"),
+            math.percentage(math.div($number, 10))
+              // div除法、percentage求百分比。
+          )
+      )
+    ),
+    $colors
+  ) !global; // 将局部变量转换为全局变量
+}

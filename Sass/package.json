@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "sass ./src/index.scss ./compiler/index.css -w",
-    "test": "sass ./src/test.scss ./compiler/test.css -w"
+    "test": "sass ./src/test.scss ./compiler/test.css -w",
+    "common-var": "sass ./src/common/var.scss ./compiler/common-var.css -w"
   },
   "dependencies": {
     "node-sass": "^8.0.0",

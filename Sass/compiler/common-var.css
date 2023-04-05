@@ -1,0 +1,32 @@
+/* Error: There is no module with the namespace "map".
+ *    ,
+ * 30 |     $colors: map.deep-merge(
+ *    | ,------------^
+ * 31 | |     (
+ * 32 | |       $type: (
+ * 33 | |         "#{$mode}-#{$number}":
+ * 34 | |           mix(
+ * 35 | |             $mix-color,
+ * 36 | |             map.get($colors, $type, "base"),
+ * 37 | |             math.percentage(math.div($number, 10))
+ * 38 | |               // div除法、percentage求百分比。
+ * 39 | |           )
+ * 40 | |       )
+ * 41 | |     ),
+ * 42 | |     $colors
+ * 43 | |   ) !global; // 将局部变量转换为全局变量
+ *    | '---^
+ *    '
+ *   src\mixins\_var.scss 30:12  set-color-mix-level()
+ *   src\common\var.scss 39:5    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "map".\a    \2577 \a 30 \2502      $colors: map.deep-merge(\a    \2502  \250c \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 ^\a 31 \2502  \2502      (\a 32 \2502  \2502        $type: (\a 33 \2502  \2502          "#{$mode}-#{$number}":\a 34 \2502  \2502            mix(\a 35 \2502  \2502              $mix-color,\a 36 \2502  \2502              map.get($colors, $type, "base"),\a 37 \2502  \2502              math.percentage(math.div($number, 10))\a 38 \2502  \2502                // div\9664 \6cd5 \3001 percentage\6c42 \767e \5206 \6bd4 \3002 \a 39 \2502  \2502            )\a 40 \2502  \2502        )\a 41 \2502  \2502      ),\a 42 \2502  \2502      $colors\a 43 \2502  \2502    ) !global; // \5c06 \5c40 \90e8 \53d8 \91cf \8f6c \6362 \4e3a \5168 \5c40 \53d8 \91cf \a    \2502  \2514 \2500 \2500 \2500 ^\a    \2575 \a   src\\mixins\\_var.scss 30:12  set-color-mix-level()\a   src\\common\\var.scss 39:5    root stylesheet';
+}
