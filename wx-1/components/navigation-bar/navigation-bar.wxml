@@ -1,0 +1,11 @@
+<view 
+class="navigation-bar-container {{extClass}}"
+style="{{initContainerStyle}} {{opacityStyle}}"
+>
+  <view class="content" style="{{initContentStyle}}">
+    <mp-icon class="left-icon" icon="{{'back2'}}" size="{{iconSize}}"></mp-icon>
+    <view class="title-container" style="{{initContentTitleStyle}}">
+      {{title}}
+    </view>
+  </view>
+</view>

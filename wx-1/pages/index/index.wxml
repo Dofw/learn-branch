@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<page-meta root-font-size="{{fontSize}}">
+</page-meta>
+<navigation-bar 
+ext-class="navigationCls" 
+background="#fcc" 
+color="#765" 
+back="{{true}}"
+show="{{true}}" title="首页"
+></navigation-bar>
+<view class="test">
+  <view >123</view>
+  <view>123</view>
+  <view>123</view>
+  <view bind:touchstart="jumpUser" >click me!</view>
+
+  <!-- <custom-comp>
+   custom-comp-123
+  </custom-comp> -->
+</view>
+<tab-bar></tab-bar>

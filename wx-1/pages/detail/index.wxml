@@ -1,0 +1,15 @@
+<!--pages/detail/index.wxml-->
+<page-meta root-font-size="{{fontSize}}">
+</page-meta>
+<view>
+  <view class="top">top</view>
+  <view class="content">
+    <view class="content-left">
+      left
+      <view bind:tap="jumpUser">click me!</view>
+    </view>
+    <view class="content-right" bind:tap="jumpUser">right</view>
+  </view>
+</view>
+
+<tab-bar class="footer"></tab-bar>

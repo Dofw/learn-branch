@@ -1,0 +1,6 @@
+<!--components/custom-comp/index.wxml-->
+<view>
+  <view wx:for="{{list}}" wx:key="*this">
+    <slot item="{{item}}" index="{{index}}" />
+  </view>
+</view>

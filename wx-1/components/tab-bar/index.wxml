@@ -1,0 +1,6 @@
+<view class="tab-bar-container">
+  <view wx:for="{{menuLists}}" wx:key="key" class="item {{curKey === index ? 'active' :''}}"bind:tap="switchTab" data-key="{{item.key}}">
+    <mp-icon extClass="icon" icon="{{item.icon}}" color="{{curKey === index ? 'goldenrod' : 'black'}}" size="{{20}}"></mp-icon>
+    <text class="text">{{item.text}}</text>
+  </view>
+</view>
