@@ -1,3 +1,5 @@
+const Mock = require('../miniprogram_npm/mockjs/index')
+
 /**
  * wx.request 二次封装
  * 1. 构造成promise风格、同时方便使用async、await
@@ -11,12 +13,19 @@
  * @param {*} options 
  */
 const baseConf = {
-  baseUrl: 'localhost:80',
+  baseUrl: 'https://localhost:80',
   timeout: 60000,
 }
 function Http(option) {
   return new Promise((resolve, reject) => {
     const conf = mergeConf(baseConf, option)
+    if(typeof Mock._mocked[conf.url] !== 'undefined'){
+      const temp = Mock._mocked[conf.url].template
+      const response = Mock.mock(temp)
+      resolve(response)
+      return
+    }
+ 
     wx.request({
       ...conf,
       success(res) {
