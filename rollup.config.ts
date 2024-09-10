@@ -20,33 +20,33 @@ const commonPlugins = [
       '@': path.resolve(__dirname, 'src'),
     },
   }),
-  nodeResolve({
-    exportConditions: ['node'],
-    preferBuiltins: true,
-    extensions: ['.js', '.ts', '.json'],
-  }),
+  // nodeResolve({
+  //   exportConditions: ['node'],
+  //   preferBuiltins: true,
+  //   extensions: ['.js', '.ts', '.json'],
+  // }),
 ]
 
 const normalConfig = defineConfig({
   plugins: [
-    ...commonPlugins,
     test(),
-    commonjs({
-      defaultIsModuleExports: 'auto',
-    }),
+    ...commonPlugins,
+    // commonjs({
+    //   defaultIsModuleExports: 'auto',
+    // }),
     // esbuild 和 typescript2 插件同时使用时, typescript2 执行检查和声明文件生成, esbuild 进行编译.
     // https://www.npmjs.com/package/rollup-plugin-typescript2
     // ts检查/声明文件生成
-    typescript({
-      tsconfigOverride: {
-        compilerOptions: {
-          declaration: false,
-          declarationDir: null,
-        },
-      },
-      useTsconfigDeclarationDir: true,
-      clean: true,
-    }),
+    // typescript({
+    //   tsconfigOverride: {
+    //     compilerOptions: {
+    //       declaration: false,
+    //       declarationDir: null,
+    //     },
+    //   },
+    //   useTsconfigDeclarationDir: true,
+    //   clean: true,
+    // }),
     // ts构建
     esbuild(),
     UnpluginDetectDuplicatedDeps(),
