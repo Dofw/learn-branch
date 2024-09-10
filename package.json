@@ -1,15 +1,29 @@
 {
   "name": "learn-branch",
+  "type": "module",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "",
   "author": "",
   "license": "ISC",
-  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.ts --configPlugin esbuild",
+    "tsx": "tsx src/index.ts"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.26.0",
-    "eslint": "^9.9.0"
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/node": "^22.5.4",
+    "eslint": "^9.9.0",
+    "rollup": "^4.21.2",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tsx": "^4.19.0",
+    "unplugin-detect-duplicated-deps": "^2.0.0",
+    "unplugin-externalize-deps": "^0.0.10"
   }
 }
