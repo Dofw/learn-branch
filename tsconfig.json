@@ -1,38 +1,4 @@
-// tsconfig.base.json, classify according to the document
-// https://www.typescriptlang.org/tsconfig/#Type_Checking_6248
 {
-  "compilerOptions": {
-    // language and enviroment
-    "target": "es2020",
-    "jsx": "preserve",
-    "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
-    // modules
-    "baseUrl": ".",
-    "rootDir": ".",
-    "module": "esnext",
-    "moduleResolution": "Bundler",
-    "moduleSuffixes": ["", ".js", ".jsx", ".ts", ".tsx"],
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "resolveJsonModule": true,
-    // type checking
-    "strict": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": false,
-    "allowUnreachableCode": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitOverride": true,
-    "noImplicitThis": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "isolatedModules": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true
-  },
-  "include": ["**/*.ts", "packages"],
-  "exclude": ["node_modules/*"]
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
 }

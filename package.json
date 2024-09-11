@@ -1,29 +1,18 @@
 {
-  "name": "learn-branch",
+  "name": "nuxt-app",
+  "private": true,
   "type": "module",
-  "version": "1.0.0",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config rollup.config.ts --configPlugin esbuild",
-    "tsx": "tsx src/index.ts"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
-  "devDependencies": {
-    "@antfu/eslint-config": "^2.26.0",
-    "@rollup/plugin-alias": "^5.1.0",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@types/node": "^22.5.4",
-    "eslint": "^9.9.0",
-    "rollup": "^4.21.2",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-esbuild": "^6.1.1",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "tsx": "^4.19.0",
-    "unplugin-detect-duplicated-deps": "^2.0.0",
-    "unplugin-externalize-deps": "^0.0.10"
-  }
+  "dependencies": {
+    "nuxt": "^3.13.0",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
 }
