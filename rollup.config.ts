@@ -20,11 +20,11 @@ const commonPlugins = [
       '@': path.resolve(__dirname, 'src'),
     },
   }),
-  // nodeResolve({
-  //   exportConditions: ['node'],
-  //   preferBuiltins: true,
-  //   extensions: ['.js', '.ts', '.json'],
-  // }),
+  nodeResolve({
+    exportConditions: ['node'],
+    preferBuiltins: true,
+    extensions: ['.js', '.ts', '.json'],
+  }),
 ]
 
 const normalConfig = defineConfig({
