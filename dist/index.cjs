@@ -1,8 +1,8 @@
 'use strict';
 
-var fs = require('node:fs');
-
+Promise.resolve().then(function () { return require('./c-BrLLPZze.js'); }).then((b) => {
+  console.log("b module loaded", b);
+});
 const a = "a module";
 
 console.log(a);
-console.log(fs.readFileSync("README.md", "utf-8"));

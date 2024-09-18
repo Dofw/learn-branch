@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      rollup-plugin-clean2:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.26.0
@@ -1640,6 +1644,9 @@ packages:
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  rollup-plugin-clean2@1.0.0:
+    resolution: {integrity: sha512-8RzTvMm7eFR1I07Oa5c6U/awN967phErdj0KMl7T9mCQ9Wy255VY/RIgdsi9p8C4Ua1pkR0QbX4WRmHlW5NxKA==}
 
   rollup-plugin-dts@6.1.1:
     resolution: {integrity: sha512-aSHRcJ6KG2IHIioYlvAOcEq6U99sVtqDDKVhnwt70rW6tsz3tv5OSjEiWcgzfsHdLyGXZ/3b/7b/+Za3Y6r1XA==}
@@ -3544,6 +3551,8 @@ snapshots:
       supports-preserve-symlinks-flag: 1.0.0
 
   reusify@1.0.4: {}
+
+  rollup-plugin-clean2@1.0.0: {}
 
   rollup-plugin-dts@6.1.1(rollup@4.21.2)(typescript@5.5.4):
     dependencies:

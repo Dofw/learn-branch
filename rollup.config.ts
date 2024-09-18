@@ -1,13 +1,15 @@
 
 import { defineConfig } from 'rollup'
 import nodeResolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
+// import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
+import clean from 'rollup-plugin-clean2'
 import esbuild from 'rollup-plugin-esbuild'
 import alias from '@rollup/plugin-alias'
-import UnpluginExternalizeDeps from 'unplugin-externalize-deps/rollup'
-import UnpluginDetectDuplicatedDeps from 'unplugin-detect-duplicated-deps/rollup'
-import test from './src/plugin'
+// import UnpluginExternalizeDeps from 'unplugin-externalize-deps/rollup'
+// import UnpluginDetectDuplicatedDeps from 'unplugin-detect-duplicated-deps/rollup'
+import test from './src/plugins/plugin'
+import test2 from './src/plugins/plugin2'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -15,6 +17,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const commonPlugins = [
+  clean(),
   alias({
     entries: {
       '@': path.resolve(__dirname, 'src'),
@@ -30,6 +33,7 @@ const commonPlugins = [
 const normalConfig = defineConfig({
   plugins: [
     test(),
+    test2(),
     ...commonPlugins,
     // commonjs({
     //   defaultIsModuleExports: 'auto',
@@ -49,8 +53,6 @@ const normalConfig = defineConfig({
     // }),
     // ts构建
     esbuild(),
-    UnpluginDetectDuplicatedDeps(),
-    UnpluginExternalizeDeps(),
   ],
   input: {
     index: './src/index.ts',

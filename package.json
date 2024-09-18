@@ -26,5 +26,8 @@
     "tsx": "^4.19.0",
     "unplugin-detect-duplicated-deps": "^2.0.0",
     "unplugin-externalize-deps": "^0.0.10"
+  },
+  "dependencies": {
+    "rollup-plugin-clean2": "^1.0.0"
   }
 }
